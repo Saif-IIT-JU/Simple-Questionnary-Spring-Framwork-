@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        <bean id = "a1" class = "com.saif.Answers">
+        <constructor-arg value = "101" type = "int"></constructor-arg>
+        <constructor-arg value = "I am Saif Zaman." type = "String"></constructor-arg>
+        <constructor-arg value = "Saif" type = "String"></constructor-arg>
+        </bean>
+        <bean id = "a2" class = "com.saif.Answers">
+        <constructor-arg value = "102" type = "int"></constructor-arg>
+        <constructor-arg value = "I am a B.Sc. Student in Jahangirnagar University." type = "String"></constructor-arg>
+        <constructor-arg value = "Saif" type = "String"></constructor-arg>
+        </bean>
+        <bean id = "a3" class = "com.saif.Answers">
+        <constructor-arg value = "103" type = "int"></constructor-arg>
+        <constructor-arg value = "I like to do solve proghramming problems" type = "String"></constructor-arg>
+        <constructor-arg value = "Saif" type = "String"></constructor-arg>
+        </bean>
+        
+        <bean id = "q1" class = "com.saif.Questions">
+        
+        <constructor-arg value = "1" type = "int"></constructor-arg>
+        <constructor-arg value = "Describe yourself." type = "String"></constructor-arg>
+        <constructor-arg>
+        <list>
+        <ref bean = "a1"/>
+        <ref bean = "a2"/>
+        <ref bean = "a3"/>
+        </list>
+        </constructor-arg>
+        
+        </bean>
+        
+        
+        </beans>
